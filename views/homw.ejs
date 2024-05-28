@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <h1>Hey from server</h1>
+    <% if(locals.id){ %>
+    <p>Url generated : http://localhost:8000/<%= id %></p>
+    <% } %>
+    <h1>URL SHORTNER</h1>
+
+    <form method="POST" action="/url">
+        
+        <p>Enter your Original Url :</p>
+        <input type="text" name="url" placeholder="original">
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>
